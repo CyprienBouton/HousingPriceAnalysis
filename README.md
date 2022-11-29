@@ -2,6 +2,8 @@
 The goal of the project is to predict the price of housing in France.
 The analysis is based on the 3 last years.
 
+It's a important tool because it allow both buyers and sellers, to know the price of an accomodation before consedering to buy or sell it.
+
 # Table of contents
 
 - [Dataset](#dataset)
