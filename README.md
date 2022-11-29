@@ -8,7 +8,6 @@ The analysis is based on the 3 last years.
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [Commit Policy](#commit-policy)
-- [References](#references)
 
 # Dataset
 
@@ -25,6 +24,12 @@ pip3 install -r requirements.txt
 Export the project to your PYTHONPATH.
 
 # Quit Start
+
+in your terminal run
+```
+python3 main.py
+```
+
 # Commit Policy
 
 Please, respect the following commit policy:
@@ -36,4 +41,3 @@ Please, respect the following commit policy:
 [DEL]       commit describing elements or functionalities deleted
 [PR]        pull request
 ```
-# References
