@@ -22,7 +22,18 @@ def load_data(year):
     col2use = ['Transaction cost', 'Transaction date', 'Transaction type', 'Built surface',
        'Number of rooms', 'Ground surface', 'Longitude',
        'Latitude', 'Town', 'Department', 'Postcode']
-    year = str(year)
-    return pd.read_csv('dset/full_'+year+".csv", header=0,
-     names=col_names, usecols=col2use, keep_default_na=False)
+    
+    typecols = {'Transaction cost':float,
+            'Transaction date':pd._libs.tslibs.timestamps.Timestamp,
+            'Transaction type':str,                
+            'Built surface':float,
+            'Number of rooms':float,
+            'Ground surface':float,
+            'Longitude':float,
+            'Latitude':float,
+            'Town':str,
+            'Department':float,
+            'Postcode':float}
+    return pd.read_csv('dset/full_'+str(year)+".csv", header=0,
+     names=col_names, usecols=col2use, dtype=typecols, keep_default_na=False)
 
