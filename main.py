@@ -1,13 +1,15 @@
 import pandas as pd
 import re
+import streamlit as st
+from extract_transform.load_data import load_data
+import pickle
 
-data = pd.read_csv('dset/valeursfoncieres-2022-s1.txt', on_bad_lines='skip')
+data = pd.DataFrame()
+for year in range(2017,2023):
+    data_year = load_data(year)
+    data = pd.concat([data,data_year])
+    print(data.shape, data_year.shape)
 
-def split_values(x):
-    return re.split("\|",str(x.values[0]))
-
-data = data.apply(split_values,axis=1)
-
-if __name__ == "__main__":
-    print(data.iloc[0])
-
+# we save the data in a pickle file
+file = open('data.pkl', 'wb')
+pickle.dump(data, file)

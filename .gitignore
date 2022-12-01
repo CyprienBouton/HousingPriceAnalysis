@@ -1,3 +1,4 @@
 ENV/*
 .python-version
 dset/
+__pycache__/*
