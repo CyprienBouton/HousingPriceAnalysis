@@ -1,6 +1,6 @@
 # HousePricingAnalysis
 The goal of the project is to predict the price of housing in Paris.
-The analysis is based on the 6 last years.
+The analysis is based on all the transactions in Paris between 2017 and 2022.
 
 It's a important tool because it allow both buyers and sellers, to know the price of an accomodation before consedering to buy or sell it.
 
