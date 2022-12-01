@@ -23,5 +23,6 @@ def load_data(year):
        'Number of rooms', 'Ground surface', 'Longitude',
        'Latitude', 'Town', 'Department', 'Postcode']
     year = str(year)
-    return pd.read_csv('dset/full_'+year+".csv", header=0, names=col_names, usecols=col2use, keep_default_na=False)
+    return pd.read_csv('dset/full_'+year+".csv", header=0,
+     names=col_names, usecols=col2use, keep_default_na=False)
 
