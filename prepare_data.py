@@ -20,9 +20,7 @@ Nsigma = 1.5 # any data superior to 1.5 times its standard deviation will be rem
 data = remove_outlier.remove_outlier(data, Nsigma, Bounds)
 data = keep_flat.keep_flat(data)
 data = add_delta_days.add_delta_days(data)
-file1 = open('dset/test.pkl','wb')
-pickle.dump(data,file1)
-data = keep_paris.keep_paris(data) #keep only usefull data and create a column District
+data = keep_paris.keep_paris(data) #keep flat only in paris and create a column District
 
 # we save the data in a pickle file
 file = open('dset/data.pkl', 'wb')
