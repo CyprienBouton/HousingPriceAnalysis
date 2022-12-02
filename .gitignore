@@ -3,3 +3,9 @@ ENV/*
 dset/full*
 extract_transform/__pycache__/*
 __pycache__/*
+dset/full_2017.csv
+dset/full_2018.csv
+dset/full_2019.csv
+dset/full_2020.csv
+dset/full_2021.csv
+dset/full_2022.csv
