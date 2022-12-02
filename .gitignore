@@ -1,5 +1,4 @@
 ENV/*
 .python-version
-dset/full*
 extract_transform/__pycache__/*
 __pycache__/*
