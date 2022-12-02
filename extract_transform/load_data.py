@@ -29,9 +29,7 @@ def load_data(year):
       'Ground surface':float,
       'Longitude':float,
       'Latitude':float,
-      'Town':str,
-      'Department':str,
-      'Postcode':str}
+      'Town':str}
    return pd.read_csv('dset/full_'+str(year)+".csv", header=0,
      names=col_names, usecols=col2use, dtype=typecols)
      
