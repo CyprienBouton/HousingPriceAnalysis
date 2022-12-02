@@ -2,4 +2,3 @@ ENV/*
 .python-version
 dset/
 extract_transform/__pycache__/*
-__pycache__/*
