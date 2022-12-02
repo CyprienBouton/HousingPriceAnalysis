@@ -19,8 +19,8 @@ def load_data(year):
       'nature_culture_speciale', 'Ground surface', 'Longitude', 'Latitude']
 
    # keep the most relevant cols
-   col2use = ['Transaction cost', 'Transaction date', 'Transaction type', 'Built surface',
-      'Number of rooms', 'Ground surface', 'Longitude',
+   col2use = ['Transaction cost', 'Transaction date', 'Transaction type', 'Type of property',
+    'Built surface', 'Number of rooms', 'Ground surface', 'Longitude',
       'Latitude', 'Town', 'Department', 'Postcode']
    typecols = {'Transaction cost':float,
       'Transaction type':str,                
@@ -31,8 +31,7 @@ def load_data(year):
       'Latitude':float,
       'Town':str,
       'Department':str,
-      'Postcode':float}
+      'Postcode':str}
    return pd.read_csv('dset/full_'+str(year)+".csv", header=0,
-     names=col_names, usecols=col2use, dtype=typecols,
-      keep_default_na=False)
+     names=col_names, usecols=col2use, dtype=typecols)
 

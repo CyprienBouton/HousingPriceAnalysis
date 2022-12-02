@@ -1,3 +1,6 @@
+import numpy as np
+from scipy import stats
+
 def remove_outlier(data, Nsigma, Bounds):
     """
     1. Remove the unlikely transaction based on human judgment: Bounds records
@@ -16,5 +19,6 @@ def remove_outlier(data, Nsigma, Bounds):
          (data['Transaction cost'] > Bounds['Transaction cost min']) &
          (data['Transaction cost'] < Bounds['Transaction cost max'])]
     
+    datared = data[['Built surface', 'Ground surface', 'Transaction cost']]
     data = data[(np.abs(stats.zscore(datared)) < Nsigma).all(axis=1)]
     return data
