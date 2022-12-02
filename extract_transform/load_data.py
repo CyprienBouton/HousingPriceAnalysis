@@ -21,7 +21,7 @@ def load_data(year):
    # keep the most relevant cols
    col2use = ['Transaction cost', 'Transaction date', 'Transaction type', 'Type of property',
     'Built surface', 'Number of rooms', 'Ground surface', 'Longitude',
-      'Latitude', 'Town', 'Department', 'Postcode']
+      'Latitude', 'Town']
    typecols = {'Transaction cost':float,
       'Transaction type':str,                
       'Built surface':float,
