@@ -34,3 +34,4 @@ def load_data(year):
       'Postcode':str}
    return pd.read_csv('dset/full_'+str(year)+".csv", header=0,
      names=col_names, usecols=col2use, dtype=typecols)
+     

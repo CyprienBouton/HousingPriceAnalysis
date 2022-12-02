@@ -9,3 +9,4 @@ def clean_data(data):
     data = data[data['Transaction type'] == 'Vente']
     data = data.dropna()
     return data
+    
