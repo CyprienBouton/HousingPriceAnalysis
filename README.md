@@ -1,5 +1,5 @@
 # HousePricingAnalysis
-The goal of the project is to predict the price of housing in Paris.
+The goal of the project is to predict the price of a flat in Paris.
 The analysis is based on all the transactions in Paris between 2017 and 2022.
 
 It's a important tool because it allow both buyers and sellers, to know the price of an accomodation before consedering to buy or sell it.
@@ -27,9 +27,9 @@ Export the project to your PYTHONPATH.
 
 # Quit Start
 
-in your terminal run
+The report is a streamlit app which can be run with the following command line:
 ```
-python3 main.py
+streamlit run app.py
 ```
 
 # Commit Policy

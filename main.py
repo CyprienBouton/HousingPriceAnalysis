@@ -1,12 +1,14 @@
 import pickle
 import pandas as pd
 import streamlit as st
-from extract_transform import clean_data, remove_outlier, keep_flat_house, add_delta_days
+from extract_transform import (load_data, clean_data, remove_outlier,
+ keep_flat_house, add_delta_days)
 
 data = pd.DataFrame()
 for year in range(2017,2023):
-    data_year = load_data(year)
+    data_year = load_data.load_data(year)
     data = pd.concat([data,data_year])
+    print("current shape of the data", datadata.shape)
 
 data = clean_data.clean_data(data)
 
@@ -20,7 +22,7 @@ Nsigma = 1.5 # any data superior to 1.5 times its standard deviation will be rem
 data = remove_outlier.remove_outlier(data, Nsigma, Bounds)
 data = keep_flat_house.keep_flat_house(data)
 data = add_delta_days.add_delta_days(data)
-print(data.head(5))
+print(data.head(10))
 
 # we save the data in a pickle file
 file = open('dset/data.pkl', 'wb')
