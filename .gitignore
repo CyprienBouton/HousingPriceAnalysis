@@ -3,4 +3,3 @@ ENV/*
 dset/
 extract_transform/__pycache__/*
 __pycache__/*
-load_data.py
