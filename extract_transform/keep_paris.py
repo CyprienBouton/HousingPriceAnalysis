@@ -11,10 +11,9 @@ def get_district(Town):
 def keep_paris(data):
     """we only focus on flat in PAris
         1. Remove all accomodation that are not in Paris
-        2. Add a column District
-        3. Remove Town column
+        2. Replace the column Town by the column District
     """
     data = data[data['Town'].apply(lambda x: x[:6])=="Paris "]
-    data["District"] = data['Town'].apply(get_district)
-    data = data.drop('Town', axis=1)
+    data['District'] = data.apply(lambda x: get_district(x.Town), axis=1)
+    data.drop('Town', axis=1)
     return data
