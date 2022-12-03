@@ -20,7 +20,7 @@ data = remove_outlier.remove_outlier(data, Nsigma, Bounds)
 data = keep_flat.keep_flat(data)
 data = add_delta_days.add_delta_days(data)
 data = keep_paris.keep_paris(data) #keep flat only in paris and create a column District
-
+data.dropna()
 # we save the data in a pickle file
 file = open('dset/data.pkl', 'wb')
 pickle.dump(data, file)
