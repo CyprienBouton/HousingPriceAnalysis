@@ -6,7 +6,7 @@ def get_district(Town):
     In Paris Town is like "Paris 10e arrondissement"
     """
     assert type(Town)==str
-    return re.search(r'[0-9]+',Town).group()
+    return float(re.search(r'[0-9]+',Town).group())
 
 def keep_paris(data):
     """we only focus on flat in PAris
@@ -15,5 +15,5 @@ def keep_paris(data):
     """
     data = data[data['Town'].apply(lambda x: x[:6])=="Paris "]
     data['District'] = data.apply(lambda x: get_district(x.Town), axis=1)
-    data.drop('Town', axis=1)
+    data = data.drop('Town', axis=1)
     return data
