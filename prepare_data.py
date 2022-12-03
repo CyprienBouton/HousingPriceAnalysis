@@ -8,7 +8,6 @@ data = pd.DataFrame()
 for year in range(2017,2023):
     data_year = load_data.load_data(year)
     data = pd.concat([data,data_year])
-
 data = clean_data.clean_data(data)
 Bounds = {
     "Built surface min": 9,
