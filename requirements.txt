@@ -2,7 +2,3 @@ pandas
 streamlit
 scipy
 scikit-learn
-geopandas
-GEOS
-cartopy
-geoplot
