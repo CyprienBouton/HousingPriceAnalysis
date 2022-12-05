@@ -1,15 +1,18 @@
 import pickle
-import plotly.express as px
 import streamlit as st
 import matplotlib.pyplot as plt
 
 file = open("dset/data.pkl","rb")
 data =pickle.load(file)
+data['cost per m2']=data['Transaction cost']/data['Built surface']
 
-data['latitude']=data['latitude'].astype(int)
-data['longitude']=data['longitude'].astype(int) 
-fig =  px.scatter_geo(data, lat="latitude", lon="longitude",
- scope='europe',center={'lat':48.9,'lon':2.3})
-# fig.show()
-st.plotly_chart(fig)
-# st.map(data)
+print(data['cost per m2'].min())
+# fig = plt.figure()
+# fig =plt.plot(data['longitude'], data['latitude'])
+# plt.show()
+#  st.plotly_chart(fig)
+data['cost per m2'].hist(bins = 10)
+plt.show()
+data = data[(data['cost per m2']<14000) & (data['cost per m2']>6000)]
+data['cost per m2'].hist(bins = 10)
+plt.show()
