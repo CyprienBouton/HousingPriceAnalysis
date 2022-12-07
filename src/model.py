@@ -11,7 +11,7 @@ def MAPE(true, pred):
     return (100*np.abs(true-pred)/true).mean()
 
 x_train, x_test, y_train, y_test = train_test_split(data[[
-    "Built surface","Number of rooms", "Longitude","Latitude", "District", "Delta days"]], 
+    "Built surface","Number of rooms", "Longitude","Latitude", "District"]], 
 data.iloc[:,0].values.ravel(), test_size=.2, random_state=1) # split train_set and test_set
 
 model = RandomForestRegressor(n_estimators=100, min_samples_split=4)
