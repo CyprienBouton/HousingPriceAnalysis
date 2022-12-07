@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 file = open("dset/data.pkl","rb")
 data =pickle.load(file)
 
-def cost_per_m2(nb_points=50000):
+def real_estate_map(nb_points=50000):
     assert type(nb_points)==int
     df = data[:nb_points]
     fig, ax = plt.subplots(figsize=(3.,2.3))
