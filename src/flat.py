@@ -29,9 +29,3 @@ class Flat:
         input=input.astype(float)
         preds = model.predict(input)[0]
         return '{:,}'.format(round(preds))
-
-if __name__=="__main__":
-    myHome = Flat(16, 1, "270 rue saint Jacques", 5)
-    import pickle
-    model = pickle.load(open("src/model.pkl","rb"))
-    print(myHome.predict_price(model))
