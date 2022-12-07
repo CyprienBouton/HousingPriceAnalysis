@@ -11,6 +11,7 @@ def page4():
     nb_rooms = st.number_input("Number of rooms", min_value=1, max_value=50)
     adress = st.text_input("adress")
     district = st.selectbox("District:",[i for i in range(1,21)])
-    yourFlat = Flat(surface, nb_rooms, adress, district)
+    date = st.date_input("Date of the transaction")
+    yourFlat = Flat(surface, nb_rooms, adress, district, date)
     st.markdown("We estimate that your flat worth "+str(yourFlat.predict_price(model))+" €")
     
