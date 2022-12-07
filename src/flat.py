@@ -1,4 +1,6 @@
 from geopy.geocoders import Nominatim
+import pandas as pd
+import numpy as np
 
 class Flat:
     def __init__(self, surface, nb_rooms: int, adress: str, district: int):
@@ -19,3 +21,17 @@ class Flat:
     
     def long(self):
         return self.geocode_location().longitude
+    
+    def predict_price(self, model):
+        #give a price estimation for a given model
+        input = pd.DataFrame([[self.surface, self.nb_rooms, self.district, self.lat(), self.long()]],
+        columns = ['Built surface', 'Number of rooms', 'Longitude', 'Latitude', 'District'])
+        input=input.astype(float)
+        preds = model.predict(input)[0]
+        return '{:,}'.format(round(preds))
+
+if __name__=="__main__":
+    myHome = Flat(16, 1, "270 rue saint Jacques", 5)
+    import pickle
+    model = pickle.load(open("src/model.pkl","rb"))
+    print(myHome.predict_price(model))
