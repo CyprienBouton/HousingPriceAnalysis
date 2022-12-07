@@ -1,5 +1,5 @@
 import streamlit as st
-from visualize import cost_per_m2, price_per_surface
+from src.visualize import cost_per_m2, price_per_surface
 def page3():
     st.markdown("<h1>Data visualization</h1>",
      unsafe_allow_html=True)
