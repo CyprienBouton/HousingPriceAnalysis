@@ -1,8 +1,15 @@
 import streamlit as st
-from src.visualize import cost_per_m2, price_per_surface
+from src.visualize import real_estate_map, price_per_surface, price_per_room, price_by_district
 def page3():
     st.markdown("<h1>Data visualization</h1>",
      unsafe_allow_html=True)
-    st.markdown("See how the following paramters effect on the price:")
-    st.pyplot(price_per_surface.price_per_surface())
-    st.pyplot(cost_per_m2.cost_per_m2())
+    st.markdown("Visualize how each parameter impact the transaction value:")
+    parameter_to_visualized = {
+        "Surface": price_per_surface.price_per_surface,
+        "Number of rooms": price_per_room.price_per_room,
+        "Location": real_estate_map.real_estate_map,
+        "District": price_by_district.price_by_district
+    }
+
+    selected_visualization = st.selectbox("Choose a parameter:", parameter_to_visualized.keys())
+    st.pyplot(parameter_to_visualized[selected_visualization]())
