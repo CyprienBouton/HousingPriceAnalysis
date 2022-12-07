@@ -11,6 +11,3 @@ def price_by_district():
     district_ordered = list(set(data['District']))
     ax.bar(district_ordered,avg_price)
     return fig
-
-if __name__=="__main__":
-    print(price_by_district, type(price_by_district))
