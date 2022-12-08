@@ -19,7 +19,7 @@ All the transactions on the housing market in France are available here https://
 
 This project use all the housing transactions from 2017 to 2022. This dataset includes the localization of the accomodation and information about the transaction.
 
-This project use only the most relevent features:
+This project use only the most relevent features of the government's dataset:
 - Transaction cost
 - Transaction date
 - Built surface
