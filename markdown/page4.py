@@ -2,7 +2,13 @@ import streamlit as st
 from src.flat import Flat
 import pickle
 
-model = pickle.load(open('src/model.pkl','rb'))
+def price_estimation(flat, file):
+    if file!=None: # first load the model
+        model = pickle.load(file)
+        preds = flat.predict_price(model)
+        return st.write("We estimate that your flat worth "+str(preds)+" €")
+    else:
+        return st.write("complete all the missing fields")    
 
 def page4():
     st.markdown("<h1>Flat price prediction</h1>",
@@ -13,5 +19,5 @@ def page4():
     district = st.selectbox("District:",[i for i in range(1,21)])
     date = st.date_input("Date of the transaction")
     yourFlat = Flat(surface, nb_rooms, adress, district, date)
-    st.markdown("We estimate that your flat worth "+str(yourFlat.predict_price(model))+" €")
-    
+    file = st.file_uploader("Import your model (pkl file required)",type='pkl')
+    st.button("Price estimation",on_click=price_estimation(yourFlat,file))
