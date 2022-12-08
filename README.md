@@ -19,7 +19,7 @@ All the transactions on the housing market in France are available here https://
 
 This project use all the housing transactions from 2017 to 2022. This dataset includes the localization of the accomodation and information about the transaction.
 
-We only keep the most relevent features:
+This project use only the most relevent features:
 - Transaction cost
 - Transaction date
 - Built surface
@@ -27,7 +27,7 @@ We only keep the most relevent features:
 - Longitude
 - Latitude
 
-We also add additional features:
+And other additional features:
 - District 
 - Delta days The number of days since the first transaction of the dataset
 
@@ -41,7 +41,7 @@ After creating and activating a virtual environment, install libraries needed:
 ```
 pip3 install -r requirements.txt
 ```
-Install the model on your local environment using:
+Install the model on your local machine using:
 ```
 python model.py
 ``` 
@@ -59,8 +59,8 @@ streamlit run app.py
 
 Development flow:
 - Cleaning the dataset **prepare_data.py**
-- Create and train a Random Forest model using sklearn **model.py**
-- Built a streamlit app **app.py** using 4 pages in the folder **markdown/**
+- Creating and trainning a Random Forest model using sklearn **model.py**
+- Building a streamlit app **app.py** using 4 pages in the folder **markdown/**
 
 # Commit Policy
 
