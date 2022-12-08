@@ -19,5 +19,5 @@ def page4():
     district = st.selectbox("District:",[i for i in range(1,21)])
     date = st.date_input("Date of the transaction")
     yourFlat = Flat(surface, nb_rooms, adress, district, date)
-    file = st.file_uploader("Import your model (pkl file required)",type='pkl')
+    file = st.file_uploader("Import your model",type='pkl')
     st.button("Price estimation",on_click=price_estimation(yourFlat,file))
