@@ -7,7 +7,7 @@ def main_page():
     The purpose of this project is to predict the price of flats in Paris and to visualize
     the housing market in Paris.<br/><br/>
     There are 3 sections in this app:
-    - Introduction
+    - Dataset
     - Data visualization
     - Flat price prediction
     """, unsafe_allow_html=True)
