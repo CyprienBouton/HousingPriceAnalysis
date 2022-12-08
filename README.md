@@ -2,7 +2,7 @@
 The goal of the project is to predict the price of a flat in Paris.
 The analysis is based on all the transactions in Paris between 2017 and 2022.
 
-It's a important tool because it allow both buyers and sellers, to know the price of an accomodation before consedering to buy or sell it.
+It could be use for both buyers and sellers, to know the price of an accomodation before consedering to buy or sell it.
 
 # Table of contents
 
@@ -17,8 +17,13 @@ All the transactions on the housing market in France are available here https://
 
 # Installation
 
-After cloning the project,
-
+To use this project, first clone the repo on your device using the command below:
+```
+git init
+```
+```
+git clone https://github.com/navendu-pottekkat/nsfw-filter.git
+```
 ```
 pip3 install -r requirements.txt
 ```
