@@ -3,4 +3,3 @@ streamlit
 scipy
 scikit-learn
 matplotlib
-geopy

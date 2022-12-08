@@ -6,9 +6,10 @@ It could be use for both buyers and sellers, to know the price of an accomodatio
 
 # Table of contents
 
-- [Dataset](#dataset)
+- [Dataset]
 - [Installation](#installation)
 - [Quick Start](#quick-start)
+- [Development]
 - [Commit Policy](#commit-policy)
 
 # Dataset
@@ -19,16 +20,16 @@ All the transactions on the housing market in France are available here https://
 
 To use this project, first clone the repo on your device using the command below:
 ```
-git init
+git clone git@github.com:19bouton/HousePricingAnalysis.git
 ```
-```
-git clone https://github.com/navendu-pottekkat/nsfw-filter.git
-```
+Then run the following comand to install libraries needed:
 ```
 pip3 install -r requirements.txt
 ```
-
-Export the project to your PYTHONPATH.
+Install the model on your local environment using:
+'''
+python model.py
+''' 
 
 # Quit Start
 
