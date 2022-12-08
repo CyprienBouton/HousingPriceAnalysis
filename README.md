@@ -50,10 +50,9 @@ python model.py
 
 This project is an app which could be use to predict the price of a flat or to visualize 
 the housing market in Paris.
-To launch the app run the following command line:
-```
-streamlit run app.py
-```
+To launch the app
+https://cyprienbouton-housepricinganalysis-app-mzrf4h.streamlit.app/
+To predict the price of flats you can also use your own model
 
 # Development
 
