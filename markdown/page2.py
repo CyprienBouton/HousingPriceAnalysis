@@ -1,5 +1,4 @@
 import streamlit as st
-import streamlit as st
 import pickle
 def page2():
     st.markdown("<h1>Dataset</h1>",
