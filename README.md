@@ -6,10 +6,10 @@ It could be use for both buyers and sellers, to know the price of an accomodatio
 
 # Table of contents
 
-- [Dataset]
+- [Dataset](#dataset)
 - [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Development]
+- [Usage](#usage)
+- [Development](#development)
 - [Commit Policy](#commit-policy)
 
 # Dataset
@@ -22,21 +22,31 @@ To use this project, first clone the repo on your device using the command below
 ```
 git clone git@github.com:19bouton/HousePricingAnalysis.git
 ```
-Then run the following comand to install libraries needed:
+After creating and activating a virtual environment, install libraries needed:
 ```
 pip3 install -r requirements.txt
 ```
 Install the model on your local environment using:
-'''
+```
 python model.py
-''' 
+``` 
 
-# Quit Start
+# Usage
 
-The report is a streamlit app which can be run with the following command line:
+This project is an app which could be use to predict the price of a flat or to visualize 
+the housing market in Paris.
+To launch the app run the following command lines:
 ```
 streamlit run app.py
 ```
+
+# Development
+Development flow:
+- Cleaning the dataset **prepare_data.py**
+- Create and train a Random Forest model using sklearn **model.py**
+- Built a streamlit app **app.py** using 4 pages in the folder **markdown/**
+- Each page use 
+
 
 # Commit Policy
 
