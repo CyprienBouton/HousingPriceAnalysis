@@ -8,5 +8,4 @@ def add_delta_days(data):
     oneday = pd.Timedelta(days=1)
     data["Transaction date"]= pd.to_datetime(data["Transaction date"]) #convert str to pd.datetime
     data['Delta days'] = (data['Transaction date'] - data['Transaction date'].min())/oneday
-    data = data.drop('Transaction date', axis=1)
     return data
