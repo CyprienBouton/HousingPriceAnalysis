@@ -15,12 +15,27 @@ It could be use for both buyers and sellers, to know the price of an accomodatio
 # Dataset
 
 All the transactions on the housing market in France are available here https://files.data.gouv.fr/geo-dvf/latest/csv/
+For more information on the dataset consult the following link https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/#description
+
+This project use all the housing transactions from 2017 to 2022. This dataset includes the localization of the accomodation and information about the transaction.
+
+We only keep the most relevent features:
+- Transaction cost
+- Transaction date
+- Built surface
+- Number of rooms
+- Longitude
+- Latitude
+
+We also add additional features:
+- District 
+- Delta days The number of days since the first transaction of the dataset
 
 # Installation
 
 To use this project, first clone the repo on your device using the command below:
 ```
-git clone git@github.com:19bouton/HousePricingAnalysis.git
+git clone git@github.com:CyprienBouton/HousePricingAnalysis.git
 ```
 After creating and activating a virtual environment, install libraries needed:
 ```
@@ -35,18 +50,17 @@ python model.py
 
 This project is an app which could be use to predict the price of a flat or to visualize 
 the housing market in Paris.
-To launch the app run the following command lines:
+To launch the app run the following command line:
 ```
 streamlit run app.py
 ```
 
 # Development
+
 Development flow:
 - Cleaning the dataset **prepare_data.py**
 - Create and train a Random Forest model using sklearn **model.py**
 - Built a streamlit app **app.py** using 4 pages in the folder **markdown/**
-- Each page use 
-
 
 # Commit Policy
 
