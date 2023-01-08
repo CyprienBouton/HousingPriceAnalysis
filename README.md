@@ -2,7 +2,7 @@
 The goal of the project is to predict the price of flats in Paris.
 The analysis is based on all the transactions in Paris between 2017 and 2022.
 
-It could be use for both buyers and sellers, to know the price of an accomodation before consedering to buy or sell it.
+It could be used for both buyers and sellers to find out the price of an accommodation before considering buying or selling it.
 
 # Table of contents
 
@@ -14,12 +14,12 @@ It could be use for both buyers and sellers, to know the price of an accomodatio
 
 # Dataset
 
-All the transactions on the housing market in France are available [here](https://files.data.gouv.fr/geo-dvf/latest/csv/)
-For more information on the dataset consult the following link [Description_Dataset](https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/#description)
+All the transactions on the housing market in France are available [here](https://files.data.gouv.fr/geo-dvf/latest/csv/).
+For more information on the dataset, you can consult this [link](https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/#description).
 
-This project use all the housing transactions from 2017 to 2022. This dataset includes the localization of the accomodation and information about the transaction.
+This project uses all the housing transactions from 2017 to 2022. This dataset includes the localization of the accomodation and information about the transaction.
 
-This project use only the most relevent features of the government's dataset:
+This project uses only the most relevent features of the government's dataset:
 - Transaction cost
 - Transaction date
 - Built surface
@@ -29,7 +29,7 @@ This project use only the most relevent features of the government's dataset:
 
 And other additional features:
 - District 
-- Delta days The number of days since the first transaction of the dataset
+- Delta days: number of days since the first transaction in the dataset
 
 # Installation
 
@@ -37,22 +37,22 @@ To use this project, first clone the repo on your device using the command below
 ```
 git clone git@github.com:CyprienBouton/HousePricingAnalysis.git
 ```
-After creating and activating a virtual environment, install libraries needed:
+After creating and activating a virtual environment, install the required libraries:
 ```
 pip3 install -r requirements.txt
 ```
-Install the model on your local machine using:
+Then, you can install the model on your local machine using:
 ```
 python model.py
 ``` 
 
 # Usage
 
-This project is an app which could be use to predict the price of a flat or to visualize 
+This project is an app which could be used to predict the price of flats or to visualize 
 the housing market in Paris.
 To launch the app click [here](https://cyprienbouton-housepricinganalysis-app-mzrf4h.streamlit.app/)
 
-To predict the price of flats you can either use this model or your own model
+To predict the price of flats you can either use the model downloaded above or use your own model.
 
 # Development
 
