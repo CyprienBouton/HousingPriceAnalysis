@@ -9,4 +9,4 @@ page_names_to_funcs = {
 }
 
 selected_page = st.sidebar.selectbox("Go to page", page_names_to_funcs.keys())
-page_names_to_funcs[selected_page]()
+page_names_to_funcs[selected_page]() 
