@@ -1,5 +1,5 @@
 # HousePricingAnalysis
-The goal of the project is to predict the price of a flat in Paris.
+The goal of the project is to predict the price of flats in Paris.
 The analysis is based on all the transactions in Paris between 2017 and 2022.
 
 It could be use for both buyers and sellers, to know the price of an accomodation before consedering to buy or sell it.
