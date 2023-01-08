@@ -5,13 +5,12 @@ def page2():
      unsafe_allow_html=True)
     st.markdown("""
     All the transactions on the housing market in France are available 
-    here https://files.data.gouv.fr/geo-dvf/latest/csv/
+    [here](https://files.data.gouv.fr/geo-dvf/latest/csv/)
     
-    For more information on the dataset consult the following link 
-    https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/#description
-    This project use all the housing transactions from 2017 to 2022. This dataset 
-    includes the localization of the accomodation and information about the transaction.
-    This project use only the most relevent features of the government dataset:
+    For more information on the dataset consult this [link](https://www.data.gouv.fr/fr/datasets/demandes-de-valeurs-foncieres/#description)
+    This project uses all the housing transactions from 2017 to 2022. This dataset 
+    includes the localization of the accommodation and information about the transactions.
+    This project uses only the most relevent features of the government dataset:
     - Transaction cost
     - Transaction date
     - Built surface
@@ -20,7 +19,7 @@ def page2():
     - Latitude
     And other additional features:
     - District 
-    - Delta days The number of days since the first transaction of the dataset
+    - Delta days number of days since the first transaction in the dataset
     
     
     We obtain the following dataset:
