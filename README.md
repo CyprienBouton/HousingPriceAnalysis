@@ -1,4 +1,4 @@
-# HousePricingAnalysis
+# Introduction
 The goal of the project is to predict the price of flats in Paris.
 The analysis is based on all the transactions in Paris between 2017 and 2022.
 
@@ -35,7 +35,7 @@ And other additional features:
 
 To use this project, first clone the repo on your device using the command below:
 ```
-git clone git@github.com:CyprienBouton/HousePricingAnalysis.git
+git clone git@github.com:CyprienBouton/HousingPriceAnalysis.git
 ```
 After creating and activating a virtual environment, install the required libraries:
 ```
