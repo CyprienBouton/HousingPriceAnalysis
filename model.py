@@ -2,7 +2,6 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
 import pickle
 import numpy as np
-from sklearn.metrics import r2_score
 
 def MAPE(true, pred):
     return (100*np.abs(true-pred)/true).mean()
