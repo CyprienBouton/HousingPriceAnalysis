@@ -50,7 +50,7 @@ py model.py
 
 This project is an app which could be used to predict the price of flats or to visualize 
 the housing market in Paris.
-To launch the app click [here](https://cyprienbouton-housepricinganalysis-app-mzrf4h.streamlit.app/)
+To launch the app click [here](https://cyprienbouton-housingpriceanalysis-app-ilt2rx.streamlit.app/)
 
 To predict the price of flats you can either use the model downloaded above or use your own model.
 
