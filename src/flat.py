@@ -4,10 +4,10 @@ import numpy as np
 import datetime
 
 class Flat:
-    def __init__(self, surface, nb_rooms: int, adress: str, district: int, date):
+    def __init__(self, surface, nb_rooms: int, address: str, district: int, date):
         self.surface = surface
         self.nb_rooms = nb_rooms
-        self.adress = adress
+        self.address = address
         self.district = district
         self.date = date
         self.postcode = str(75000+self.district)
@@ -18,7 +18,7 @@ class Flat:
     def geocode_location(self):
         #making an instance of Nominatim class
         geolocator = Nominatim(user_agent="my_request")
-        location = geolocator.geocode(f"{self.adress}, Paris {self.postcode}")
+        location = geolocator.geocode(f"{self.address}, Paris {self.postcode}")
         return location
 
     def lat(self):
