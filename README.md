@@ -73,4 +73,4 @@ Please, respect the following commit policy:
 [PR]        pull request
 ```
 
-Feel free to fork this repository and suggest a pull request if you respect the commit policy.
+Feel free to fork this repository and suggest a pull request if you respect the above commit policy.
