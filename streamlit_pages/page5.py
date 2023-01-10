@@ -14,21 +14,20 @@ def MAPE(true, pred):
 def page5():
     st.markdown("<h1>Create your own model</h1>", unsafe_allow_html=True)
     model_names = {
-        "Linear": LinearRegression,
-        "Ridge": Ridge,
-        "Lasso": Lasso,
-        "DecisionTreeRegressor": DecisionTreeRegressor,
-        "Random Forest": RandomForestRegressor,
-        "KNN": KNeighborsRegressor,
-        "SVM": SVR,
-        "Gaussian": GaussianProcessRegressor
+        "Linear": LinearRegression(),
+        "Ridge": Ridge(),
+        "Lasso": Lasso(),
+        "DecisionTreeRegressor": DecisionTreeRegressor(),
+        "Random Forest": RandomForestRegressor(),
+        "KNN": KNeighborsRegressor(),
+        "Gaussian": GaussianProcessRegressor()
     }
     model_name = st.selectbox("Model", model_names.keys())
     model = model_names[model_name]
-    x_train = pickle.load(open('src/x_train.pkl','rb'))
-    y_train = pickle.load(open('src/y_train.pkl','rb'))
-    x_test = pickle.load(open('src/x_test.pkl','rb'))
-    y_test = pickle.load(open('src/y_test.pkl','rb'))
+    x_train = pickle.load(open('dset/x_train.pkl','rb'))
+    y_train = pickle.load(open('dset/y_train.pkl','rb'))
+    x_test = pickle.load(open('dset/x_test.pkl','rb'))
+    y_test = pickle.load(open('dset/y_test.pkl','rb'))
     model.fit(x_train, y_train)
-    error = MAPE(y_test, model.predicts(x_test))
-    st.write(f"Your model has an error of {error}%")
+    error = MAPE(y_test, model.predict(x_test))
+    st.write("""Your model has an error of {:.1f} %""".format(error))
