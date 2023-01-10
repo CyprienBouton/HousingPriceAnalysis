@@ -43,7 +43,7 @@ pip3 install -r requirements.txt
 ```
 Then, you can install the model on your local machine using:
 ```
-python model.py
+py model.py
 ``` 
 
 # Usage
@@ -72,3 +72,5 @@ Please, respect the following commit policy:
 [DEL]       commit describing elements or functionalities deleted
 [PR]        pull request
 ```
+
+Feel free to fork this repository and suggest a pull request if you respect the commit policy.
