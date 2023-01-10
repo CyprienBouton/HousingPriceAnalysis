@@ -1,7 +1,7 @@
 import pickle
 import pandas as pd
 import streamlit as st
-from extract_transform import (load_data, clean_data, remove_outlier,
+from src.extract_transform import (load_data, clean_data, remove_outlier,
  keep_flat, add_delta_days, keep_paris)
 
 if __name__=="__main__":
