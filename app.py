@@ -7,7 +7,7 @@ if __name__=="__main__":
     "Dataset": page2.page2,
     "Data vizualisation": page3.page3,
     "Flat Price prediction": page4.page4,
-    "Train your own model": page5.page5
+    "Create your own model": page5.page5
     }
 
     selected_page = st.sidebar.selectbox("Go to page", page_names_to_funcs.keys())
