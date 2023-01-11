@@ -30,4 +30,4 @@ def page5():
     y_test = pickle.load(open('dset/y_test.pkl','rb'))
     model.fit(x_train, y_train)
     error = MAPE(y_test, model.predict(x_test))
-    st.write("""Your model has an error of {:.1f} %""".format(error))
+    st.write("""Your model has an error of {:.2f} %""".format(error))
