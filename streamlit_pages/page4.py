@@ -20,4 +20,6 @@ def page4():
     date = st.date_input("Date of the transaction")
     yourFlat = Flat(surface, nb_rooms, address, district, date)
     file = st.file_uploader("Import your model",type='pkl')
-    st.button("Price estimation",on_click=price_estimation(yourFlat,file))
+    prediction = st.button("Price estimation")
+    if prediction:
+        price_estimation(yourFlat,file)
