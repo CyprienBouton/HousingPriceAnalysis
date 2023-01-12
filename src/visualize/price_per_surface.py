@@ -6,6 +6,9 @@ file = open("dset/data.pkl","rb")
 data =pickle.load(file)
 
 def price_per_surface(nb_points=50000):
+    """
+    Return a figure showing the cost of flats depending on the built surface.
+    """
     df = data[:nb_points]
     fig, ax = plt.subplots(figsize=(3.,2.3))
     ax.scatter(df['Built surface'], df['Transaction cost']*1e-6)
@@ -21,7 +24,7 @@ def trend_line(x,y,x_name: str, y_name: str):
     """
     function to compute the linear trend line of a scatter. Return:
         1. The trend line
-        2. A string re^resenting the trend line's equation
+        2. A string representing the trend line's equation
     """
     z = np.polyfit(x, y, 1)
     p = np.poly1d(z)

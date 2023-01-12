@@ -8,6 +8,10 @@ file = open("dset/data.pkl","rb")
 data =pickle.load(file)
 
 def price_per_date():
+    """
+    Fonction that returns a figure showing the cost per square meter over time.
+    The price are smoothed over a one month period.
+    """
     fig, ax = plt.subplots(figsize=(3.,2.3))
     data['Month'] = data['Transaction date'].apply(lambda x: datetime.date(x.year, x.month, 1))
     avg_price = data.groupby('Month')['Cost per m2'].agg(np.mean)
