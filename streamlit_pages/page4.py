@@ -8,7 +8,7 @@ def price_estimation(flat, file):
         preds = flat.predict_price(model)
         return st.write("We estimate that your flat worth "+str(preds)+" €")
     else:
-        return st.warning('You have to upload the model to estimate the price!', icon="⚠️")    
+        return st.warning('You have to upload a model to estimate the price!', icon="⚠️")    
 
 def page4():
     st.markdown("<h1>Flat price prediction</h1>",
