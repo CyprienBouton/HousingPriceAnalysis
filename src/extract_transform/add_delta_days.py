@@ -1,8 +1,7 @@
 import pandas as pd
 def add_delta_days(data):
     """
-        1. Add a column Delta days: Date - Date of the first transaction
-        2. Remove column Transaction date
+        Add a column Delta days = Date - (Date of the first transaction)
     """
     #Divide by oneday to get ride of type timedelta
     oneday = pd.Timedelta(days=1)

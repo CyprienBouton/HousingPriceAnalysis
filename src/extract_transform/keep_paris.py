@@ -3,10 +3,9 @@ import re
 def get_district(Town):
     """
     The purpose of this function is to get the district number from the Town
-    In Paris Town is like "Paris 10e arrondissement"
     """
     assert type(Town)==str
-    return float(re.search(r'[0-9]+',Town).group())
+    return float(re.search(r'[0-9]+',Town).group())#In Paris Town is like "Paris 10e arrondissement
 
 def keep_paris(data):
     """we only focus on flat in PAris
