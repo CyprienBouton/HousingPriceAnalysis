@@ -4,6 +4,14 @@ import numpy as np
 import datetime
 
 class Flat:
+    """
+    this class contain the following attributes:
+        Built in Surface
+        Number of rooms
+        Address
+        District
+        Date of the transaction 
+    """
     def __init__(self, surface, nb_rooms: int, address: str, district: int, date):
         self.surface = surface
         self.nb_rooms = nb_rooms
@@ -16,7 +24,10 @@ class Flat:
         self.relative_date = (self.date - datetime.date(2017, 1, 7))/oneday
 
     def geocode_location(self):
-        #making an instance of Nominatim class
+        """
+        Create a geolocator object from the adress and the postcode.
+        This allow to get the latitude and the longitude
+        """
         geolocator = Nominatim(user_agent="my_request")
         location = geolocator.geocode(f"{self.address}, Paris {self.postcode}")
         return location
