@@ -2,6 +2,9 @@ import streamlit as st
 from . import page2, page3, page4
 
 def main_page():
+    """
+    Show the different section of the apps.
+    """
     st.markdown("<h1>Flat price prediction in Paris</h1>", unsafe_allow_html=True)
     st.markdown("""
     The purpose of this project is to predict the price of flats in Paris and to visualize

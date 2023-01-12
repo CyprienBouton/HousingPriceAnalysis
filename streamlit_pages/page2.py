@@ -1,6 +1,9 @@
 import streamlit as st
 import pickle
 def page2():
+    """
+    Page showing information about dataset.
+    """
     st.markdown("<h1>Dataset</h1>",
      unsafe_allow_html=True)
     st.markdown("""

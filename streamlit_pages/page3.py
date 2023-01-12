@@ -1,7 +1,12 @@
 import streamlit as st
 from src.visualize import (real_estate_map, price_per_surface,
  price_per_room, price_by_district, price_per_date)
+
 def page3():
+    """ 
+    Show the different features and how they impact the transaction cost.
+    For parameters except Surface, we use cost par m2 rather than the transaction cost.
+    """
     st.markdown("<h1>Data visualization</h1>",
      unsafe_allow_html=True)
     st.markdown("Visualize how each parameter impacts the transaction value:")
