@@ -3,6 +3,7 @@ from src.flat import Flat
 import pickle
 
 def price_estimation(flat, file):
+    #compute the price if the model is loaded otherwise return a warning
     if file!=None: # first load the model
         model = pickle.load(file)
         preds = flat.predict_price(model)
@@ -19,7 +20,7 @@ def page4():
     district = st.selectbox("District:",[i for i in range(1,21)])
     date = st.date_input("Date of the transaction")
     yourFlat = Flat(surface, nb_rooms, address, district, date)
-    file = st.file_uploader("Import your model",type='pkl')
+    file = st.file_uploader("Import your model (.pkl format)",type='pkl')
     prediction = st.button("Price estimation")
     if prediction:
         price_estimation(yourFlat,file)
