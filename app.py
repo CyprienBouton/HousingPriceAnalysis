@@ -5,7 +5,7 @@ if __name__=="__main__":
     page_names_to_funcs = {
     "General Description": main_page.main_page,
     "Dataset": page2.page2,
-    "Data vizualisation": page3.page3,
+    "Data visualization": page3.page3,
     "Flat Price prediction": page4.page4,
     "Create your own model": page5.page5
     }
