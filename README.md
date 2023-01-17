@@ -1,4 +1,6 @@
 # Introduction
+This projects was first elaborated in the scope of a project with Mines Paris PSL - University in partnership with [AccroHome](https://accrohome.fr/). Then I have completed this project to build a streamlit app.
+
 The goal of the project is to predict the price of flats in Paris.
 The analysis is based on all the transactions in Paris between 2017 and 2022.
 
