@@ -31,7 +31,7 @@ This project uses only the most relevent features of the government's dataset:
 
 And other additional features:
 - District 
-- Delta days: number of days since the first transaction in the dataset
+- Delta days: number of days since the first transaction of the dataset
 
 # Installation
 
@@ -48,13 +48,12 @@ pip3 install -r requirements.txt
 
 This project is an app which could be used to predict the price of flats or to visualize 
 the housing market in Paris.
-To launch the app click [here](https://cyprienbouton-housingpriceanalysis-app-ilt2rx.streamlit.app/)
+To launch the app click [here](https://cyprienbouton-housingpriceanalysis-app-ilt2rx.streamlit.app/).
 
 # Development
 
 Development flow:
 - Cleaning the dataset **prepare_data.py**
-- Creating and trainning a Random Forest model using sklearn **model.py**
 - Building a streamlit app **app.py** using 4 pages in the folder **markdown/**
 
 # Commit Policy
