@@ -6,7 +6,7 @@ from src.extract_transform import (load_data, clean_data, remove_outlier,
 
 if __name__=="__main__":
     data = pd.DataFrame()
-    for year in range(2017,2023):
+    for year in range(2018, 2023):
         data_year = load_data.load_data(year)
         data = pd.concat([data,data_year])
     data = clean_data.clean_data(data)
