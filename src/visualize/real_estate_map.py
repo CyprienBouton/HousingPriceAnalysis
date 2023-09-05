@@ -2,7 +2,7 @@ import pickle
 import matplotlib.pyplot as plt
 
 file = open("dset/data.pkl","rb")
-data =pickle.load(file)
+data = pickle.load(file)
 
 def real_estate_map(nb_points=50000):
     """
