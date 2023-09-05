@@ -1,8 +1,8 @@
 # Introduction
-This work was first elaborated as part of a project with Mines Paris PSL - University in partnership with [AccroHome](https://accrohome.fr/). Then I have completed it to build a streamlit app.
+This work was first elaborated as part of a project with Mines Paris PSL - University in partnership with [AccroHome](https://www.linkedin.com/company/accrohome). Then I have completed it to build a streamlit app.
 
 The goal of the project is to predict the price of flats in Paris.
-The analysis is based on all the transactions in Paris between 2017 and 2022.
+The analysis is based on all the transactions in Paris between 2018 and 2022.
 
 It could be used for both buyers and sellers to find out the price of an accommodation before considering buying or selling it.
 
@@ -35,7 +35,7 @@ And other additional features:
 
 # Installation
 
-To use this project, first clone the repo on your device using the command below:
+If you want to contribute to this project, first clone the repo on your device using the command below:
 ```
 git clone git@github.com:CyprienBouton/HousingPriceAnalysis.git
 ```
@@ -43,18 +43,12 @@ After creating and activating a virtual environment, install the required librar
 ```
 pip3 install -r requirements.txt
 ```
-Then, you can install the model on your local machine using:
-```
-py model.py
-``` 
 
 # Usage
 
 This project is an app which could be used to predict the price of flats or to visualize 
 the housing market in Paris.
 To launch the app click [here](https://cyprienbouton-housingpriceanalysis-app-ilt2rx.streamlit.app/)
-
-To predict the price of flats you can either use the model downloaded above or use your own model.
 
 # Development
 
