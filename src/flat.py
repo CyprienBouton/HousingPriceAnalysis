@@ -21,7 +21,7 @@ class Flat:
         self.postcode = str(75000+self.district)
         oneday = pd.Timedelta(days=1)
         # substract the 1st transaction of the dset. See extract_transform/add_delta.py for more details
-        self.relative_date = (self.date - datetime.date(2017, 1, 7))/oneday
+        self.relative_date = (self.date - datetime.date(2018, 1, 2 ))/oneday
 
     def geocode_location(self):
         """
