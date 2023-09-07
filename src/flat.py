@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 import datetime
 
+from src.model import predict_model
+
 class Flat:
     """
     this class contain the following attributes:
@@ -38,11 +40,11 @@ class Flat:
     def long(self):
         return self.geocode_location().longitude
     
-    def predict_price(self, model):
+    def predict_price(self, models_dict):
         #give a price estimation for a given model
         input = pd.DataFrame([[
             self.surface, self.nb_rooms, self.district, self.lat(), self.long(), self.relative_date]],
         columns = ['Built surface', 'Number of rooms', 'Longitude', 'Latitude', 'District', 'Delta days'])
         input=input.astype(float)
-        preds = model.predict(input)[0]
+        preds = predict_model(input, models_dict)[0]
         return '{:,}'.format(round(preds))
